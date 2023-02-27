@@ -1,0 +1,9 @@
+docker run --rm --pull always -p 8080:8080 --mount "source=conduktor_data,target=/var/conduktor" conduktor/conduktor-platform:latest
+
+
+localhost:8080
+
+User: admin@conduktor.io
+Pass: admin
+
+host.docker.internal:19092
