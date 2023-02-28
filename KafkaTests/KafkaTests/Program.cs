@@ -12,7 +12,7 @@ static IHostBuilder CreateHostBuilder(string[] args) =>
     Host.CreateDefaultBuilder(args)
     .ConfigureServices((context, collection) =>
     {
-        collection.AddHostedService<KafkaProducerHostedService>();
+        //collection.AddHostedService<KafkaProducerHostedService>();
         collection.AddHostedService<KafkaConsumerHostedService>();
     });
 

@@ -8,7 +8,7 @@ public class KafkaConsumerHostedService : IHostedService
 
     private readonly ILogger<KafkaConsumerHostedService> _logger;
     private IConsumer<Null, byte[]> _consumer;
-    private string topic = "topic5";
+    private string topic = "topic1";
 
     public KafkaConsumerHostedService(ILogger<KafkaConsumerHostedService> logger)
     {

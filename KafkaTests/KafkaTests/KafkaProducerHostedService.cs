@@ -6,7 +6,7 @@ public class KafkaProducerHostedService : IHostedService
 {
     private readonly ILogger<KafkaProducerHostedService> _logger;
     private IProducer<Null, byte[]> _producer;
-    private string topic = "topic5";
+    private string topic = "topic1";
 
     public KafkaProducerHostedService(ILogger<KafkaProducerHostedService> logger)
     {
@@ -32,7 +32,9 @@ public class KafkaProducerHostedService : IHostedService
                 {
                     Value = ProtoSerializer.GPBSerialization(value)
                 }, cancellationToken);
-                await Task.Delay(1000, cancellationToken);
+                await Task.Delay(100, cancellationToken);
+                if (i == 50)
+                    break;
             }
             _producer.Flush(timeout: TimeSpan.FromSeconds(10));
         });

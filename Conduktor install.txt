@@ -7,3 +7,4 @@ User: admin@conduktor.io
 Pass: admin
 
 host.docker.internal:19092
+host.docker.internal:29092
