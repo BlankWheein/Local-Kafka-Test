@@ -15,3 +15,6 @@ The consumer subscribes to the topic1 topic, it then listens to that topic until
 
 # Protobuf
 Both the Consumer and Producer are using Protobuf for the serialization, when the producer sends a message it will convert it into Protobuf byte array before sending. When the Consumer consumes a message it will convert the byte array into the original class.
+
+# Avro
+Added support for the use of Avro by switching out the Serializer class
